@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br" id="body35">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>35</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script type="text/javascript" src="script.js"></script>
+  </head>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ede7f6;
+      margin: 0;
+      padding: 0;
+    }
+
+    .mg {
+      background-color: purple;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .text {
+      text-align: center;
+    }
+
+    #botao {
+      display: none;
+      position: relative;
+      left: 55%;
+      border-color: lightblue;
+      top: 40%;
+    }
+
+    #lista {
+      position: relative;
+      left: 40%;
+    }
+  </style>
+
+  <body>
+    <div class="mg"><h1>Mouse Game</h1></div>
+
+    <br />
+    <p class="text">Seguindo o mesmo esquema do exercicio anterior</p>
+    <p class="text">
+      Selecione o pensador ("Immanuel Kant") e clique no botão 'Continuar'.
+    </p>
+    <br />
+
+    <select name="listaa" id="lista" size="4" onclick="botao()">
+      <option value="Um">Voltaire</option>
+      <option value="Dois">Jean-Jacques Rousseau</option>
+      <option value="Tres">John Locke</option>
+      <option value="Quatro">Montesquieu</option>
+      <option value="Cinco">Denis Diderot</option>
+      <option value="Seis">Immanuel Kant</option>
+      <option value="Sete">Jean-Baptiste-Siméon Chardin</option>
+      <option value="Oito">Jean-Honoré Fragonard</option>
+      <option value="Nove">David Hume</option>
+      <option value="Dez">Thomas Gainsborough</option>
+    </select>
+    <button id="botao" onclick="location = 'index37.html'">Continuar</button>
+
+    <script>
+      function botao() {
+        if (document.getElementById("lista").value == "Seis")
+          document.getElementById("botao").style.display = "block";
+        else document.getElementById("botao").style.display = "none";
+      }
+    </script>
+
+    <script>
+      const body35 = document.getElementById("body35");
+
+      body35.addEventListener("click", function () {
+        let contador35 = parseInt(localStorage.getItem("contador35"));
+
+        contador35 += 1;
+
+        localStorage.setItem("contador35", contador35.toString());
+      });
+    </script>
+  </body>
+</html>

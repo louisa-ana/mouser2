@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br" id="body34">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>34</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script type="text/javascript" src="script.js"></script>
+  </head>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ede7f6;
+      margin: 0;
+      padding: 0;
+    }
+
+    .mg {
+      background-color: purple;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .text {
+      text-align: center;
+    }
+
+    #botao {
+      display: none;
+      position: relative;
+      left: 49%;
+      border-color: blueviolet;
+      top: 40%;
+    }
+
+    #lista {
+      position: relative;
+      left: 40%;
+    }
+  </style>
+
+  <body>
+    <div class="mg"><h1>Mouse Game</h1></div>
+
+    <br />
+    <p class="text">
+      A caixa branca abaixo é uma caixa de lista de rolagem. Use a barra de
+      rolagem no lado direito da caixa de listagem para percorrer todas as
+      opções disponíveis. Clique em uma opção para selecioná-la.
+    </p>
+    <p class="text">
+      Selecione o mês atual (" Outubro") e clique no botão 'Continuar'.
+    </p>
+    <br />
+
+    <select name="listaa" id="lista" size="4" onclick="botao()">
+      <option value="Um">Janeiro</option>
+      <option value="Dois">Fevereiro</option>
+      <option value="Tres">Março</option>
+      <option value="Quatro">Abril</option>
+      <option value="Cinco">Maio</option>
+      <option value="Seis">Junho</option>
+      <option value="Sete">Julho</option>
+      <option value="Oito">Agosto</option>
+      <option value="Nove">Setembro</option>
+      <option value="Dez">Outubro</option>
+      <option value="Onze">Novembro</option>
+      <option value="Doze">Dezembro</option>
+    </select>
+    <button id="botao" onclick="location = 'index36.html'">Continuar</button>
+
+    <script>
+      function botao() {
+        if (document.getElementById("lista").value == "Dez")
+          document.getElementById("botao").style.display = "block";
+        else document.getElementById("botao").style.display = "none";
+      }
+    </script>
+
+    <script>
+      const body34 = document.getElementById("body34");
+
+      body34.addEventListener("click", function () {
+        let contador34 = parseInt(localStorage.getItem("contador34"));
+
+        contador34 += 1;
+
+        localStorage.setItem("contador34", contador34.toString());
+      });
+    </script>
+  </body>
+</html>

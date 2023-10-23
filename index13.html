@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br" id="body12">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>12</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script type="text/javascript" src="script.js"></script>
+  </head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ede7f6;
+      margin: 0;
+      padding: 0;
+    }
+
+    #start {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .mg {
+      background-color: purple;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    .number12 {
+      text-align: center;
+    }
+
+    .tab {
+      top: 50px;
+      left: 25%;
+      font-size: 12px;
+      color: purple;
+      position: relative;
+      display: grid;
+      grid-template-columns: 20px 20px 20px;
+      grid-template-rows: 20px 20px 20px;
+    }
+
+    #doze {
+      cursor: pointer;
+    }
+  </style>
+
+  <body>
+    <div class="mg"><h1>Mouse Game</h1></div>
+    <div class="cont">
+      <p class="number12">Clique no número 12 agora!</p>
+      <p class="number12">Você está indo muito bem!</p>
+    </div>
+
+    <div class="tab">
+      <p id="dez" onclick="location = 'index9.html'">10</p>
+      <p id="dez" onclick="location = 'index9.html'">10</p>
+      <p id="dez" onclick="location = 'index9.html'">10</p>
+      <p id="dez" onclick="location = 'index9.html'">10</p>
+      <p id="doze" onclick="location = 'index14.html'">12</p>
+      <p id="dez" onclick="location = 'index9.html'">10</p>
+      <p id="dez" onclick="location = 'index9.html'">10</p>
+      <p id="dez" onclick="location = 'index9.html'">10</p>
+      <p id="dez" onclick="location = 'index9.html'">10</p>
+    </div>
+
+    <script>
+      if (!localStorage.getItem("contador12")) {
+        localStorage.setItem("contador12", "0");
+      }
+
+      const body12 = document.getElementById("body12");
+
+      body12.addEventListener("click", function () {
+        let contador12 = parseInt(localStorage.getItem("contador12"));
+
+        contador12 += 1;
+
+        localStorage.setItem("contador12", contador12.toString());
+      });
+    </script>
+  </body>
+</html>

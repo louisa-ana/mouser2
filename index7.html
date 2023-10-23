@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br" id="body6">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>6</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script type="text/javascript" src="script.js"></script>
+  </head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ede7f6;
+      margin: 0;
+      padding: 0;
+    }
+
+    #start {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .mg {
+      background-color: purple;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .num6 {
+      color: blueviolet;
+      font-size: medium;
+      position: relative;
+      left: 100px;
+      padding-top: 30px;
+    }
+
+    .num6 span {
+      cursor: pointer;
+    }
+  </style>
+
+  <body>
+    <div class="mg"><h1>Mouse Game</h1></div>
+
+    <p class="texto">Clique no número 6 abaixo:</p>
+
+    <div class="num6">
+      <p id="6"><span onclick="location = 'index8.html'">6</span></p>
+    </div>
+
+    <script>
+      if (!localStorage.getItem("contador6")) {
+        localStorage.setItem("contador6", "0");
+      }
+
+      const body6 = document.getElementById("body6");
+
+      body6.addEventListener("click", function () {
+        let contador6 = parseInt(localStorage.getItem("contador6"));
+
+        contador6 += 1;
+
+        localStorage.setItem("contador6", contador6.toString());
+      });
+    </script>
+  </body>
+</html>

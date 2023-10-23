@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mousegame</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to bottom, #a283e0, #ede7f6);
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 250vh;
+      }
+
+      .mg {
+        background-color: #6a1b9a;
+        color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        text-align: center;
+        display: flex;
+        position: relative;
+        bottom: 0;
+        width: calc(100% - 60px);
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 2em;
+      }
+
+      h2,
+      h3 {
+        color: #333;
+        text-align: center;
+        display: flex;
+        position: relative;
+        bottom: 0;
+      }
+
+      button {
+        background-color: #6a1b9a;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        font-size: 1.5em;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+      }
+
+      button:hover {
+        background-color: #491272;
+      }
+
+      .pics {
+        display: flex;
+        position: relative;
+        bottom: 0;
+      }
+
+      .text,
+      .text1 {
+        size: 40px;
+        text-align: center;
+      }
+
+      .pics {
+        width: 100px;
+        height: 100px;
+      }
+
+      .text1 {
+        display: flex;
+        position: relative;
+        bottom:0;
+      }
+
+      table {
+        width: 800px;
+        margin: 0 auto;
+       
+      }
+
+      th,
+      td {
+        padding: 10px;
+        text-align: center;
+        border: 1px solid #333;
+        
+      }
+      
+    </style>
+  </head>
+  <body onclick=" incrementClick()">
+    <div class="mg">
+      <h1>Mouse Game</h1>
+    </div>
+
+    <h2>Você ao final parabéns!</h2>
+    <div>
+      <picture>
+        <img src="flor.png" class="pics" />
+      </picture>
+    </div>
+    <p class="text1">Aqui está o seu desempenho:</p>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Página</th>
+          <th>Cliques esperados</th>
+          <th>Cliques obtidos</th>
+        </tr>
+      </thead>
+      <tbody>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Página</th>
+              <th class="esperado">Cliques esperados</th>
+              <th class="executado">Cliques obtidos</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td class="esperado">1</td>
+              <td class="executado" id="1"></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td class="esperado">1</td>
+              <td class="executado" id="2"></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td class="esperado">1</td>
+              <td class="executado" id="3"></td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td class="esperado">1</td>
+              <td class="executado" id="4"></td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td class="esperado">1</td>
+              <td class="executado" id="5"></td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td class="esperado">1</td>
+              <td class="executado" id="6"></td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td class="esperado">1</td>
+              <td class="executado" id="7"></td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td class="esperado">1</td>
+              <td class="executado" id="8"></td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td class="esperado">1</td>
+              <td class="executado" id="9"></td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td class="esperado">1</td>
+              <td class="executado" id="10"></td>
+            </tr>
+            <tr>
+              <td>11</td>
+              <td class="esperado">1</td>
+              <td class="executado" id="11"></td>
+            </tr>
+            <tr>
+              <td>12</td>
+              <td class="esperado">1</td>
+              <td class="executado" id="12"></td>
+            </tr>
+            <tr>
+              <td>13</td>
+              <td class="esperado">1</td>
+              <td class="executado" id="13"></td>
+            </tr>
+            <tr>
+              <td>14</td>
+              <td class="esperado">1</td>
+              <td class="executado" id="14"></td>
+            </tr>
+            <tr>
+              <td>15</td>
+              <td class="esperado" >1</td>
+              <td class="executado"  id="15"></td>
+            </tr>
+            <tr>
+              <td>16</td>
+              <td class="esperado">1</td>
+              <td class="executado" id="16"></td>
+            </tr>
+            <tr>
+              <td>17</td>
+              <td class="esperado">1</td>
+              <td class="executado" id="17"></td>
+            </tr>
+            <tr>
+              <td>18</td>
+              <td class="esperado">1</td>
+              <td class="executado" id="18"></td>
+            </tr>
+            <tr>
+              <td>19</td>
+              <td class="esperado">8</td>
+              <td class="executado" id="19"></td>
+            </tr>
+            <tr>
+              <td>20</td>
+              <td class="esperado">6</td>
+              <td class="executado" id="20"></td>
+            </tr>
+            <tr>
+              <td>21</td>
+              <td class="esperado">13</td>
+              <td class="executado" id="21"></td>
+            </tr>
+            <tr>
+              <td>22</td>
+              <td class="esperado">2</td>
+              <td class="executado" id="22"></td>
+            </tr>
+            <tr>
+              <td>23</td>
+              <td class="esperado">2</td>
+              <td class="executado" id="23"></td>
+            </tr>
+            <tr>
+              <td>24</td>
+              <td class="esperado">2</td>
+              <td class="executado" id="24"></td>
+            </tr>
+            <tr>
+              <td>25</td>
+              <td class="esperado">2</td>
+              <td class="executado" id="25"></td>
+            </tr>
+            <tr>
+              <td>26</td>
+              <td class="esperado">2</td>
+              <td class="executado"  id="26"></td>
+            </tr>
+            <tr>
+              <td>27</td>
+              <td class="esperado">2</td>
+              <td class= "executado" id="27"></td>
+            </tr>
+            <tr>
+              <td>28</td>
+              <td class="esperado">11</td>
+              <td class="executado"  id="28"></td>
+            </tr>
+            <tr>
+              <td>29</td>
+              <td class="esperado">5</td>
+              <td class="executado" id="29"></td>
+            </tr>
+            <tr>
+              <td>30</td>
+              <td class="esperado">11</td>
+              <td class="executado"  id="30"></td>
+            </tr>
+            <tr>
+              <td>31</td>
+              <td class="esperado">5</td>
+              <td class="executado"  id="31"></td>
+            </tr>
+            <tr>
+              <td>32</td>
+              <td class="esperado">2</td>
+              <td class="executado" id="32"></td>
+            </tr>
+            <tr>
+              <td>33</td>
+              <td class="esperado">2</td>
+              <td class="executado" id="33"></td>
+            </tr>
+            <tr>
+              <td>34</td>
+              <td class="esperado">2</td>
+              <td class="executado" id="34"></td>
+            </tr>
+            <tr>
+              <td>35</td>
+              <td class="esperado">3</td>
+              <td class="executado"  id="35"></td>
+            </tr>
+            <tr>
+              <td>36</td>
+              <td class="esperado">9</td>
+              <td class="executado" id="36"></td>
+            </tr>
+            <tr>
+              <td>37</td>
+              <td class="esperado">15</td>
+              <td class="executado"  id="37"></td>
+            </tr>
+          </tbody>
+        </table>
+        
+
+      </tbody>
+    </table>
+<hr>
+    <table>
+      <thead>
+        <tr>
+        <th> Total de clicks esperados</th>
+        <th> Total de clicks executados</th>
+        <th> Desempenho final</th>
+        </tr>  
+            </thead>
+      <tbody>
+        <tr>
+          <td id="esperado"></td>
+          <td id="executado"></td>
+          <td id="resultado"></td>
+      </tbody>
+    </table>
+
+    <p class="text">Para prosseguir, clique no botão abaixo:</p>
+    <div>
+      <button id="resetButton" onclick="location = 'idex40.html'">Continuar</button>
+    </div>
+  </body>
+</html>
+
+<script>
+
+    
+  
+    const contador = localStorage.getItem("contador");
+    const contador2 = localStorage.getItem("contador2");
+    const contador3 = localStorage.getItem("contador3");
+    const contador4 = localStorage.getItem("contador4");
+    const contador5 = localStorage.getItem("contador5");
+    const contador6 = localStorage.getItem("contador6");
+    const contador7 = localStorage.getItem("contador7");
+    const contador8 = localStorage.getItem("contador8");
+    const contador9 = localStorage.getItem("contador9");
+    const contador10 = localStorage.getItem("contador10");
+    const contador11 = localStorage.getItem("contador11");
+    const contador12= localStorage.getItem("contador12");
+    const contador13 = localStorage.getItem("contador13");
+    const contador14 = localStorage.getItem("contador14");
+    const contador15 = localStorage.getItem("contador15");
+    const contador16 = localStorage.getItem("contador16");
+    const contador17 = localStorage.getItem("contador17");
+    const contador18 = localStorage.getItem("contador18");
+    const contador19 = localStorage.getItem("contador19");
+    const contador20 = localStorage.getItem("contador20");
+    const contador21 = localStorage.getItem("contador21");
+    const contador22 = localStorage.getItem("contador22");
+    const contador23 = localStorage.getItem("contador23");
+    const contador24= localStorage.getItem("contador24");
+    const contador25 = localStorage.getItem("contador25");
+    const contador26 = localStorage.getItem("contador26");
+    const contador27 = localStorage.getItem("contador27");
+    const contador28 = localStorage.getItem("contador28");
+    const contador29 = localStorage.getItem("contador29");
+    const contador30 = localStorage.getItem("contador30");
+    const contador31 = localStorage.getItem("contador31");
+    const contador32 = localStorage.getItem("contador32");
+    const contador33 = localStorage.getItem("contador33");
+    const contador34 = localStorage.getItem("contador34");
+    const contador35 = localStorage.getItem("contador35");
+    const contador36= localStorage.getItem("contador36");
+    const contador37= localStorage.getItem("contador37");
+  
+  
+
+    const resultado1 = document.getElementById("1");
+    resultado1.textContent = contador;
+  
+    const resultado2 = document.getElementById("2");
+    resultado2.textContent = contador2;
+  
+    const resultado3 = document.getElementById("3");
+    resultado3.textContent = contador3;
+  
+    const resultado4 = document.getElementById("4");
+    resultado4.textContent = contador4;
+  
+    const resultado5 = document.getElementById("5");
+    resultado5.textContent = contador5;
+  
+    const resultado6 = document.getElementById("6");
+    resultado6.textContent = contador6;
+  
+    const resultado7 = document.getElementById("7");
+    resultado7.textContent = contador7;
+  
+    const resultado8 = document.getElementById("8");
+    resultado8.textContent = contador8;
+
+    const resultado9 = document.getElementById("9");
+    resultado9.textContent = contador9;
+  
+    const resultado10 = document.getElementById("10");
+    resultado10.textContent = contador10;
+  
+    const resultado11 = document.getElementById("11");
+    resultado11.textContent = contador11;
+  
+    const resultado12 = document.getElementById("12");
+    resultado12.textContent = contador12;
+  
+    const resultado13 = document.getElementById("13");
+    resultado13.textContent = contador13;
+  
+    const resultado14 = document.getElementById("14");
+    resultado14.textContent = contador14;
+  
+    const resultado15 = document.getElementById("15");
+    resultado15.textContent = contador15;
+  
+    const resultado16 = document.getElementById("16");
+    resultado16.textContent = contador16;
+
+    const resultado17 = document.getElementById("17");
+    resultado17.textContent = contador17;
+  
+    const resultado18 = document.getElementById("18");
+    resultado18.textContent = contador18;
+  
+    const resultado19 = document.getElementById("19");
+    resultado19.textContent = contador19;
+  
+    const resultado20 = document.getElementById("20");
+    resultado20.textContent = contador20;
+  
+    const resultado21 = document.getElementById("21");
+    resultado21.textContent = contador21;
+  
+    const resultado22 = document.getElementById("22");
+    resultado22.textContent = contador22;
+  
+    const resultado23 = document.getElementById("23");
+    resultado23.textContent = contador23;
+  
+    const resultado24 = document.getElementById("24");
+    resultado24.textContent = contador24;
+  
+    const resultado25 = document.getElementById("25");
+    resultado25.textContent = contador25;
+  
+    const resultado26 = document.getElementById("26");
+    resultado26.textContent = contador26;
+  
+    const resultado27 = document.getElementById("27");
+    resultado27.textContent = contador27;
+  
+    const resultado28 = document.getElementById("28");
+    resultado28.textContent = contador28;
+  
+    const resultado29 = document.getElementById("29");
+    resultado29.textContent = contador29;
+  
+    const resultado30 = document.getElementById("30");
+    resultado30.textContent = contador30;
+  
+    const resultado31 = document.getElementById("31");
+    resultado31.textContent = contador31;
+  
+    const resultado32 = document.getElementById("32");
+    resultado32.textContent = contador32;
+
+    const resultado33 = document.getElementById("33");
+    resultado33.textContent = contador33;
+  
+    const resultado34 = document.getElementById("34");
+    resultado34.textContent = contador34;
+  
+    const resultado35 = document.getElementById("35");
+    resultado35.textContent = contador35;
+  
+    const resultado36 = document.getElementById("36");
+    resultado36.textContent = contador36;
+
+    const resultado37 = document.getElementById("37");
+    resultado37.textContent = contador37;
+   
+   
+   
+  
+
+
+    const resetButton = document.getElementById("resetButton");
+          resetButton.addEventListener('click', function() {
+  
+              
+              localStorage.clear();
+              window.location.href = 'index40.html';
+  
+   
+  
+              const cells = document.querySelectorAll("td");
+              cells.forEach(function(cell) {
+                  cell.textContent = "0";
+  
+              });
+  
+          });
+
+
+function somarExecutados() {
+const cellsToSum = document.querySelectorAll(".executado"); // Seleciona as células a serem somadas
+let soma = 0;
+
+
+
+cellsToSum.forEach(function(cell) {
+    soma += parseInt(cell.textContent);
+});
+
+
+const resultadoSoma = document.getElementById("executado");
+resultadoSoma.textContent = soma;
+
+}
+
+
+
+function somarEsperados() {
+const cellsToSum = document.querySelectorAll(".esperado"); 
+
+
+
+cellsToSum.forEach(function(cell) {
+    soma += parseInt(cell.textContent);
+
+});
+
+
+const resultadoSoma = document.getElementById("esperado");
+resultadoSoma.textContent = soma;
+
+}
+
+
+
+function resultFinal() {
+const esp = parseInt(document.getElementById("esperado").textContent);
+const exc = parseInt(document.getElementById("executado").textContent);
+const result = document.getElementById("resultado");
+
+
+
+if (exc === esp) {
+result.textContent = "Suficiente";
+} else if (exc > esp) {
+result.textContent = "Insuficiente";
+
+}
+
+}
+
+
+
+window.addEventListener('load', somarExecutados);
+window.addEventListener('load', somarEsperados);
+window.addEventListener('load', resultFinal);
+  
+    </script>
+
+</body>
+</html>

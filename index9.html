@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br" id="body8">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>8</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script type="text/javascript" src="script.js"></script>
+  </head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ede7f6;
+      margin: 0;
+      padding: 0;
+    }
+
+    #start {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .mg {
+      background-color: purple;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .n1 {
+      text-align: center;
+    }
+
+    .num8 {
+      color: blueviolet;
+      font-size: medium;
+      display: flex;
+      flex-flow: row-reverse;
+      padding: 40px;
+    }
+
+    .number8 {
+      text-align: center;
+    }
+
+    .num8 span {
+      cursor: pointer;
+    }
+  </style>
+
+  <body>
+    <div class="mg"><h1>Mouse Game</h1></div>
+
+    <p class="number8">Clique no número 8:</p>
+
+    <div class="num8">
+      <p id="n8"><span onclick="location = 'index10.html'">8</span></p>
+    </div>
+
+    <script>
+      if (!localStorage.getItem("contador8")) {
+        localStorage.setItem("contador8", "0");
+      }
+
+      const body8 = document.getElementById("body8");
+
+      body8.addEventListener("click", function () {
+        let contador8 = parseInt(localStorage.getItem("contador8"));
+
+        contador8 += 1;
+
+        localStorage.setItem("contador8", contador8.toString());
+      });
+    </script>
+  </body>
+</html>

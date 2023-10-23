@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br" id="body15">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>15</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script type="text/javascript" src="script.js"></script>
+  </head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ede7f6;
+      margin: 0;
+      padding: 0;
+    }
+
+    #start {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .mg {
+      background-color: purple;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    .texto {
+      text-align: center;
+    }
+    #botão {
+      position: relative;
+      display: grid;
+      left: 50%;
+      top: 20px;
+      border-color: purple;
+    }
+  </style>
+
+  <body>
+    <div class="mg"><h1>Mouse Game</h1></div>
+    <div class="cont">
+      <p class="texto">
+        Os botões podem ter muitos rótulos de texto diferentes.
+      </p>
+      <p class="texto">Clique no botão "Ir" abaixo para continuar.</p>
+    </div>
+
+    <div>
+      <button id="botão" onclick="location = 'index17.html'">Ir</button>
+    </div>
+
+    <script>
+      if (!localStorage.getItem("contador15")) {
+        localStorage.setItem("contador15", "0");
+      }
+
+      const body15 = document.getElementById("body15");
+
+      body15.addEventListener("click", function () {
+        let contador15 = parseInt(localStorage.getItem("contador15"));
+
+        contador15 += 1;
+
+        localStorage.setItem("contador15", contador15.toString());
+      });
+    </script>
+  </body>
+</html>
